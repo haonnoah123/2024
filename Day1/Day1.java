@@ -1,3 +1,4 @@
+package Day1;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +9,11 @@ import java.io.FileNotFoundException;
 public class Day1 {
     public static void main(String[] args) {
         partOne();
-        List<String> input = getInput("Day1Input.txt");
+        partTwo();
+    }
+
+    public static void partTwo() {
+        List<String> input = getInput("Day1/Day1Input.txt");
         int[][] ids = splitInput(input);
         System.out.println(getSimilarityScore(ids));
     }
@@ -30,7 +35,7 @@ public class Day1 {
     }
 
     public static void partOne() {
-        List<String> input = getInput("Day1Input.txt");
+        List<String> input = getInput("Day1/Day1Input.txt");
         int[][] ids = splitInput(input);
         System.out.println(getDistances(ids));
     }
