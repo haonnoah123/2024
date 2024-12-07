@@ -14,6 +14,9 @@ public class Day6 {
         List<String> input = Day4.getInput("Day06/Day6Input.txt");
         char[][] parsedInput = Day4.parseInput(input);
         Point start = findStart(parsedInput);
+        // can optimize by only checking the points on the path from part one
+        // since we are only adding one # it will only hit it if it is on part 1 path
+        // also could optimize loop detection instead of SOE
         bruteForce(parsedInput, start);
     }
 
