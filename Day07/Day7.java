@@ -47,7 +47,7 @@ public class Day7 {
             long[] vals = Arrays.stream(first[1].split(" ")).mapToLong(Long::parseLong).toArray();
             if (partOne && evaluate(goal, vals, 0)) {
                 count += goal;
-            } else if (evaluatePart2(goal, vals, 0)) {
+            } else if (!partOne && evaluatePart2(goal, vals, 0)) {
                 count += goal;
             }
         }
