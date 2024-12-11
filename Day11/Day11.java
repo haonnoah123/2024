@@ -17,32 +17,8 @@ public class Day11 {
         Queue<Long> stones = getStones(input);
         System.out.println(blinkITimes(stones, 25));
         stones = getStones(input);
-        System.out.println(testRecurr(stones, 75));
-    }
-
-    public static int testRecurr(Queue<Long> stones, int times) {
-        int count = 0;
-        while(!stones.isEmpty()) {
-            Long tempStone = stones.poll();
-            count += recurrBlink(tempStone, times);
-        }
-        return count;
-    }
-
-    public static int recurrBlink(Long stone, int times) {
-        if (times == 0)
-            return 1;
-            
-        if (stone == 0) {
-            return recurrBlink(stone + 1, times - 1);
-        } else if ((stone + "").length() % 2 == 0) {
-            String tempStones = stone + "";
-            long stone1 = Long.parseLong(tempStones.substring(0, tempStones.length() / 2));
-            long stone2 = Long.parseLong(tempStones.substring(tempStones.length() / 2));
-            return recurrBlink(stone1, times - 1) + recurrBlink(stone2, times - 1);
-        } else {
-            return recurrBlink(stone * 2024, times - 1);
-        }
+        Stone stone = new Stone();
+        System.out.println(stone.recurrITimes(stones, 75));
     }
 
     public static int blinkITimes(Queue<Long> stones, int times) {
