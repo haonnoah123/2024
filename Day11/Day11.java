@@ -13,9 +13,11 @@ import Day04.Day4;
 public class Day11 {
 
     public static void main(String[] args) {
+        // part one, brute force
         List<String> input = Day4.getInput("Day11/Day11Input.txt");
         Queue<Long> stones = getStones(input);
         System.out.println(blinkITimes(stones, 25));
+        // part two, memoize
         stones = getStones(input);
         Stone stone = new Stone();
         System.out.println(stone.recurrITimes(stones, 75));
