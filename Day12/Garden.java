@@ -105,7 +105,7 @@ public class Garden {
     }
 
     /**
-     * finds perimeter in part 2
+     * finds perimeter in part 2 (number of sides)
      * 
      * @param garden
      * @param startX
